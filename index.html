@@ -1,0 +1,474 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mansi S Sulakhe | Portfolio</title>
+  <meta name="description" content="Portfolio of Mansi S Sulakhe — Final-Year B.Tech CSE Student seeking Software Developer / SDE (Entry-Level)." />
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          boxShadow: {
+            soft: "0 10px 30px rgba(0,0,0,0.08)"
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    /* Tiny UX touches without extra libs */
+    .fade-up { opacity: 0; transform: translateY(14px); }
+    .fade-up.show { opacity: 1; transform: translateY(0); transition: 600ms ease; }
+    .glass { backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); }
+  </style>
+</head>
+
+<body class="min-h-screen bg-zinc-50 text-zinc-900 dark:bg-zinc-950 dark:text-zinc-100 selection:bg-zinc-900 selection:text-white dark:selection:bg-zinc-100 dark:selection:text-zinc-900">
+
+  <!-- Background decor -->
+  <div aria-hidden="true" class="fixed inset-0 -z-10">
+    <div class="absolute -top-40 -right-40 h-80 w-80 rounded-full bg-zinc-200 blur-3xl opacity-60 dark:bg-zinc-800"></div>
+    <div class="absolute -bottom-40 -left-40 h-80 w-80 rounded-full bg-zinc-200 blur-3xl opacity-60 dark:bg-zinc-800"></div>
+  </div>
+
+  <!-- Top Nav -->
+  <header class="sticky top-0 z-50 border-b border-zinc-200/70 dark:border-zinc-800/70 bg-white/70 dark:bg-zinc-950/60 glass">
+    <div class="mx-auto max-w-6xl px-4">
+      <div class="flex items-center justify-between py-3">
+        <a href="#home" class="flex items-center gap-2">
+          <span class="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-zinc-900 text-white dark:bg-zinc-100 dark:text-zinc-900 font-semibold">MS</span>
+          <span class="font-semibold tracking-tight">Mansi Sulakhe</span>
+        </a>
+
+        <nav class="hidden md:flex items-center gap-6 text-sm text-zinc-600 dark:text-zinc-300">
+          <a class="navlink hover:text-zinc-900 dark:hover:text-white" href="#about">About</a>
+          <a class="navlink hover:text-zinc-900 dark:hover:text-white" href="#skills">Skills</a>
+          <a class="navlink hover:text-zinc-900 dark:hover:text-white" href="#projects">Projects</a>
+          <a class="navlink hover:text-zinc-900 dark:hover:text-white" href="#education">Education</a>
+          <a class="navlink hover:text-zinc-900 dark:hover:text-white" href="#contact">Contact</a>
+        </nav>
+
+        <div class="flex items-center gap-2">
+          <button id="themeBtn"
+            class="inline-flex items-center gap-2 rounded-xl border border-zinc-200 bg-white px-3 py-2 text-sm shadow-sm hover:shadow transition dark:border-zinc-800 dark:bg-zinc-950"
+            aria-label="Toggle theme">
+            <span id="themeIcon" aria-hidden="true">🌙</span>
+            <span class="hidden sm:inline">Theme</span>
+          </button>
+
+          <a href="#contact"
+             class="inline-flex items-center justify-center rounded-xl bg-zinc-900 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:opacity-90 transition dark:bg-zinc-100 dark:text-zinc-900">
+            Hire Me
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <main id="home" class="mx-auto max-w-6xl px-4">
+    <section class="py-12 md:py-16">
+      <div class="grid items-center gap-8 md:grid-cols-12">
+        <div class="md:col-span-7 fade-up" data-animate>
+          <p class="inline-flex items-center gap-2 rounded-full border border-zinc-200 bg-white px-3 py-1 text-xs text-zinc-700 shadow-sm dark:border-zinc-800 dark:bg-zinc-950 dark:text-zinc-300">
+            <span class="h-2 w-2 rounded-full bg-emerald-500"></span>
+            Available for Entry-Level Roles
+          </p>
+
+          <h1 class="mt-4 text-3xl md:text-5xl font-bold tracking-tight">
+            Mansi S Sulakhe
+          </h1>
+
+          <p class="mt-3 text-lg md:text-xl text-zinc-600 dark:text-zinc-300">
+            Final-Year B.Tech CSE Student • Seeking Software Developer / SDE (Entry-Level)
+          </p>
+
+          <p class="mt-5 max-w-2xl text-zinc-700 dark:text-zinc-300 leading-relaxed">
+            Building AI + web solutions with a practical, data-driven mindset — from demand forecasting and dynamic pricing
+            to backend APIs and modern UI.
+          </p>
+
+          <div class="mt-6 flex flex-wrap gap-3">
+            <a href="#projects"
+              class="inline-flex items-center justify-center rounded-xl bg-zinc-900 px-5 py-2.5 text-sm font-semibold text-white shadow-soft hover:opacity-90 transition dark:bg-zinc-100 dark:text-zinc-900">
+              View Projects →
+            </a>
+
+            <!-- Put your PDF in the same folder and rename it to resume.pdf -->
+            <a href="Resume.pdf" target="_blank" rel="noreferrer"
+              class="inline-flex items-center justify-center rounded-xl border border-zinc-200 bg-white px-5 py-2.5 text-sm font-semibold shadow-sm hover:shadow transition dark:border-zinc-800 dark:bg-zinc-950">
+              Download Resume
+            </a>
+          </div>
+
+          <div class="mt-6 flex flex-wrap gap-2 text-xs text-zinc-600 dark:text-zinc-300">
+            <span class="rounded-full bg-zinc-100 px-3 py-1 dark:bg-zinc-900">Chennai, Tamil Nadu</span>
+            <span class="rounded-full bg-zinc-100 px-3 py-1 dark:bg-zinc-900">Python</span>
+            <span class="rounded-full bg-zinc-100 px-3 py-1 dark:bg-zinc-900">Scikit-learn</span>
+            <span class="rounded-full bg-zinc-100 px-3 py-1 dark:bg-zinc-900">FastAPI</span>
+            <span class="rounded-full bg-zinc-100 px-3 py-1 dark:bg-zinc-900">React / Next.js</span>
+          </div>
+        </div>
+
+        <div class="md:col-span-5 fade-up" data-animate>
+          <div class="rounded-3xl border border-zinc-200 bg-white p-6 shadow-soft dark:border-zinc-800 dark:bg-zinc-950">
+            <h2 class="text-sm font-semibold text-zinc-900 dark:text-zinc-100">Quick Info</h2>
+
+            <dl class="mt-4 space-y-3 text-sm">
+              <div class="flex items-center justify-between gap-3">
+                <dt class="text-zinc-600 dark:text-zinc-300">Phone</dt>
+                <dd class="font-medium">
+                  <a class="hover:underline" href="tel:+917013858839">+91 7013858839</a>
+                </dd>
+              </div>
+              <div class="flex items-center justify-between gap-3">
+                <dt class="text-zinc-600 dark:text-zinc-300">Email</dt>
+                <dd class="font-medium">
+                  <button id="copyEmail" class="hover:underline" type="button" title="Click to copy">
+                    mansisulakhe5124@gmail.com
+                  </button>
+                </dd>
+              </div>
+              <div class="flex items-center justify-between gap-3">
+                <dt class="text-zinc-600 dark:text-zinc-300">Languages</dt>
+                <dd class="font-medium text-right">Marathi (Native), English, Hindi, Tamil, Telugu</dd>
+              </div>
+            </dl>
+
+            <div class="mt-6 grid grid-cols-3 gap-2">
+              <!-- Replace # with your real links -->
+              <a href="#" class="rounded-xl border border-zinc-200 bg-white px-3 py-2 text-center text-xs font-semibold hover:shadow-sm transition dark:border-zinc-800 dark:bg-zinc-950">LinkedIn</a>
+              <a href="#" class="rounded-xl border border-zinc-200 bg-white px-3 py-2 text-center text-xs font-semibold hover:shadow-sm transition dark:border-zinc-800 dark:bg-zinc-950">GitHub</a>
+              <a href="#" class="rounded-xl border border-zinc-200 bg-white px-3 py-2 text-center text-xs font-semibold hover:shadow-sm transition dark:border-zinc-800 dark:bg-zinc-950">Portfolio</a>
+            </div>
+
+            <p id="toast" class="mt-4 hidden rounded-xl bg-emerald-50 px-3 py-2 text-xs text-emerald-800 dark:bg-emerald-950/40 dark:text-emerald-200"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="py-10 md:py-14">
+      <div class="fade-up" data-animate>
+        <h2 class="text-2xl md:text-3xl font-bold tracking-tight">About</h2>
+        <p class="mt-4 max-w-3xl text-zinc-700 dark:text-zinc-300 leading-relaxed">
+          I’m a Final-Year Computer Science student focused on building practical software products, especially at the intersection
+          of data and user experience. I enjoy taking messy real-world inputs (traffic data, supply-demand signals, user behavior)
+          and turning them into clean models, APIs, and dashboards.
+        </p>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="py-10 md:py-14">
+      <div class="fade-up" data-animate>
+        <h2 class="text-2xl md:text-3xl font-bold tracking-tight">Skills</h2>
+
+        <div class="mt-6 grid gap-4 md:grid-cols-2">
+          <div class="rounded-3xl border border-zinc-200 bg-white p-6 shadow-soft dark:border-zinc-800 dark:bg-zinc-950">
+            <h3 class="font-semibold">Core (CS + Programming)</h3>
+            <div class="mt-3 flex flex-wrap gap-2 text-xs">
+              <span class="tag">DSA via Java</span>
+              <span class="tag">OOP</span>
+              <span class="tag">DBMS</span>
+              <span class="tag">Operating Systems</span>
+              <span class="tag">Computer Networks</span>
+              <span class="tag">Debugging mindset</span>
+            </div>
+          </div>
+
+          <div class="rounded-3xl border border-zinc-200 bg-white p-6 shadow-soft dark:border-zinc-800 dark:bg-zinc-950">
+            <h3 class="font-semibold">AI & Web</h3>
+            <div class="mt-3 flex flex-wrap gap-2 text-xs">
+              <span class="tag">Python</span>
+              <span class="tag">Scikit-learn</span>
+              <span class="tag">Hugging Face</span>
+              <span class="tag">FastAPI</span>
+              <span class="tag">React</span>
+              <span class="tag">Next.js</span>
+              <span class="tag">SQL / NoSQL Basics</span>
+              <span class="tag">Tableau</span>
+              <span class="tag">Pandas</span>
+            </div>
+          </div>
+
+          <div class="rounded-3xl border border-zinc-200 bg-white p-6 shadow-soft dark:border-zinc-800 dark:bg-zinc-950">
+            <h3 class="font-semibold">DevTools & Deployment</h3>
+            <div class="mt-3 flex flex-wrap gap-2 text-xs">
+              <span class="tag">Git/GitHub Basics</span>
+              <span class="tag">Docker Basics</span>
+              <span class="tag">DevOps Basics</span>
+            </div>
+          </div>
+
+          <div class="rounded-3xl border border-zinc-200 bg-white p-6 shadow-soft dark:border-zinc-800 dark:bg-zinc-950">
+            <h3 class="font-semibold">Personal</h3>
+            <div class="mt-3 flex flex-wrap gap-2 text-xs">
+              <span class="tag">Time Management</span>
+              <span class="tag">Communication</span>
+              <span class="tag">Leadership</span>
+              <span class="tag">Problem-solving</span>
+              <span class="tag">Critical Thinking</span>
+              <span class="tag">Negotiation</span>
+            </div>
+          </div>
+        </div>
+
+        <style>
+          .tag{
+            display:inline-flex;align-items:center;justify-content:center;
+            padding:.35rem .65rem;border-radius:9999px;
+            background:rgb(244 244 245); color:rgb(63 63 70);
+          }
+          .dark .tag{ background:rgb(24 24 27); color:rgb(228 228 231); }
+        </style>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="py-10 md:py-14">
+      <div class="fade-up" data-animate>
+        <div class="flex items-end justify-between gap-4">
+          <h2 class="text-2xl md:text-3xl font-bold tracking-tight">Projects</h2>
+          <span class="text-xs text-zinc-600 dark:text-zinc-300">Jan 2025 – May 2025</span>
+        </div>
+
+        <div class="mt-6 rounded-3xl border border-zinc-200 bg-white p-6 shadow-soft dark:border-zinc-800 dark:bg-zinc-950">
+          <div class="flex flex-col gap-2 md:flex-row md:items-center md:justify-between">
+            <h3 class="text-lg font-semibold">Predictive Analytics for Optimizing Ride-hailing Services</h3>
+            <div class="flex flex-wrap gap-2 text-xs text-zinc-600 dark:text-zinc-300">
+              <span class="rounded-full bg-zinc-100 px-3 py-1 dark:bg-zinc-900">Python</span>
+              <span class="rounded-full bg-zinc-100 px-3 py-1 dark:bg-zinc-900">Scikit-learn</span>
+              <span class="rounded-full bg-zinc-100 px-3 py-1 dark:bg-zinc-900">Pandas</span>
+              <span class="rounded-full bg-zinc-100 px-3 py-1 dark:bg-zinc-900">SQL</span>
+              <span class="rounded-full bg-zinc-100 px-3 py-1 dark:bg-zinc-900">Tableau</span>
+            </div>
+          </div>
+
+          <ul class="mt-4 space-y-2 text-sm text-zinc-700 dark:text-zinc-300 leading-relaxed list-disc pl-5">
+            <li>Demand forecasting model to optimize driver allocation by predicting peak travel times and locations. :contentReference[oaicite:2]{index=2}</li>
+            <li>Dynamic pricing algorithm that adjusts fares based on real-time supply and demand signals. :contentReference[oaicite:3]{index=3}</li>
+            <li>Route optimization tool using SQL + historical traffic data to reduce waiting times and improve efficiency. :contentReference[oaicite:4]{index=4}</li>
+            <li>Driver behavior trend analysis to improve training programs and service quality. :contentReference[oaicite:5]{index=5}</li>
+            <li>Customer satisfaction prediction model; insights visualized via Tableau. :contentReference[oaicite:6]{index=6}</li>
+          </ul>
+
+          <div class="mt-6 grid gap-3 md:grid-cols-3">
+            <div class="rounded-2xl border border-zinc-200 p-4 dark:border-zinc-800">
+              <p class="text-xs text-zinc-600 dark:text-zinc-300">Focus</p>
+              <p class="mt-1 font-semibold">Forecasting & Allocation</p>
+            </div>
+            <div class="rounded-2xl border border-zinc-200 p-4 dark:border-zinc-800">
+              <p class="text-xs text-zinc-600 dark:text-zinc-300">Focus</p>
+              <p class="mt-1 font-semibold">Pricing & Demand Signals</p>
+            </div>
+            <div class="rounded-2xl border border-zinc-200 p-4 dark:border-zinc-800">
+              <p class="text-xs text-zinc-600 dark:text-zinc-300">Focus</p>
+              <p class="mt-1 font-semibold">Optimization & Insights</p>
+            </div>
+          </div>
+
+          <div class="mt-6 flex flex-wrap gap-3">
+            <a href="#contact"
+               class="inline-flex items-center justify-center rounded-xl bg-zinc-900 px-4 py-2 text-sm font-semibold text-white hover:opacity-90 transition dark:bg-zinc-100 dark:text-zinc-900">
+              Discuss this project
+            </a>
+            <button type="button" id="projCopy"
+              class="inline-flex items-center justify-center rounded-xl border border-zinc-200 bg-white px-4 py-2 text-sm font-semibold hover:shadow-sm transition dark:border-zinc-800 dark:bg-zinc-950">
+              Copy project summary
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section id="education" class="py-10 md:py-14">
+      <div class="fade-up" data-animate>
+        <h2 class="text-2xl md:text-3xl font-bold tracking-tight">Education</h2>
+
+        <div class="mt-6 grid gap-4">
+          <div class="rounded-3xl border border-zinc-200 bg-white p-6 shadow-soft dark:border-zinc-800 dark:bg-zinc-950">
+            <div class="flex flex-col gap-1 md:flex-row md:items-center md:justify-between">
+              <h3 class="font-semibold">Vel Tech University — B.Tech (CSE)</h3>
+              <p class="text-sm text-zinc-600 dark:text-zinc-300">2022 – 2026</p>
+            </div>
+            <p class="mt-2 text-sm text-zinc-700 dark:text-zinc-300">GPA: 8.53 / 10.00 :contentReference[oaicite:7]{index=7} :contentReference[oaicite:8]{index=8}</p>
+          </div>
+
+          <div class="rounded-3xl border border-zinc-200 bg-white p-6 shadow-soft dark:border-zinc-800 dark:bg-zinc-950">
+            <div class="flex flex-col gap-1 md:flex-row md:items-center md:justify-between">
+              <h3 class="font-semibold">Velammal — Pre-University (MPC)</h3>
+              <p class="text-sm text-zinc-600 dark:text-zinc-300">2020 – 2022</p>
+            </div>
+            <p class="mt-2 text-sm text-zinc-700 dark:text-zinc-300">Grade: 82% (MPC) :contentReference[oaicite:9]{index=9} :contentReference[oaicite:10]{index=10}</p>
+          </div>
+
+          <div class="rounded-3xl border border-zinc-200 bg-white p-6 shadow-soft dark:border-zinc-800 dark:bg-zinc-950">
+            <div class="flex flex-col gap-1 md:flex-row md:items-center md:justify-between">
+              <h3 class="font-semibold">Secondary Education</h3>
+              <p class="text-sm text-zinc-600 dark:text-zinc-300">Grade: 73%</p>
+            </div>
+            <p class="mt-2 text-sm text-zinc-700 dark:text-zinc-300">:contentReference[oaicite:11]{index=11}</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-10 md:py-14">
+      <div class="fade-up" data-animate>
+        <h2 class="text-2xl md:text-3xl font-bold tracking-tight">Contact</h2>
+        <p class="mt-4 max-w-2xl text-zinc-700 dark:text-zinc-300">
+          Want to collaborate or hire me for an entry-level role? Send a message and I’ll get back quickly.
+        </p>
+
+        <div class="mt-6 grid gap-4 md:grid-cols-2">
+          <div class="rounded-3xl border border-zinc-200 bg-white p-6 shadow-soft dark:border-zinc-800 dark:bg-zinc-950">
+            <h3 class="font-semibold">Direct</h3>
+            <div class="mt-4 space-y-3 text-sm">
+              <p><span class="text-zinc-600 dark:text-zinc-300">Email:</span> <a class="font-semibold hover:underline" href="mailto:mansisulakhe5124@gmail.com">mansisulakhe5124@gmail.com</a></p>
+              <p><span class="text-zinc-600 dark:text-zinc-300">Phone:</span> <a class="font-semibold hover:underline" href="tel:+917013858839">+91 7013858839</a></p>
+              <p><span class="text-zinc-600 dark:text-zinc-300">Location:</span> <span class="font-semibold">Chennai, Tamil Nadu</span></p>
+            </div>
+          </div>
+
+          <div class="rounded-3xl border border-zinc-200 bg-white p-6 shadow-soft dark:border-zinc-800 dark:bg-zinc-950">
+            <h3 class="font-semibold">Message (demo form)</h3>
+            <form id="contactForm" class="mt-4 space-y-3">
+              <input class="w-full rounded-xl border border-zinc-200 bg-white px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-zinc-900/20 dark:border-zinc-800 dark:bg-zinc-950 dark:focus:ring-zinc-100/20"
+                     type="text" placeholder="Your name" required />
+              <input class="w-full rounded-xl border border-zinc-200 bg-white px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-zinc-900/20 dark:border-zinc-800 dark:bg-zinc-950 dark:focus:ring-zinc-100/20"
+                     type="email" placeholder="Your email" required />
+              <textarea class="w-full rounded-xl border border-zinc-200 bg-white px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-zinc-900/20 dark:border-zinc-800 dark:bg-zinc-950 dark:focus:ring-zinc-100/20"
+                        rows="4" placeholder="Your message..." required></textarea>
+              <button class="w-full rounded-xl bg-zinc-900 px-4 py-3 text-sm font-semibold text-white hover:opacity-90 transition dark:bg-zinc-100 dark:text-zinc-900"
+                      type="submit">
+                Send (shows toast)
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <footer class="mt-10 pb-10 text-xs text-zinc-600 dark:text-zinc-400">
+          © <span id="year"></span> Mansi Sulakhe • Built with Tailwind CSS
+        </footer>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    // ---------- Theme ----------
+    const root = document.documentElement;
+    const themeBtn = document.getElementById("themeBtn");
+    const themeIcon = document.getElementById("themeIcon");
+
+    function setTheme(mode) {
+      if (mode === "dark") root.classList.add("dark");
+      else root.classList.remove("dark");
+      localStorage.setItem("theme", mode);
+      themeIcon.textContent = (mode === "dark") ? "☀️" : "🌙";
+    }
+
+    const saved = localStorage.getItem("theme");
+    if (saved) setTheme(saved);
+    else {
+      const prefersDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+      setTheme(prefersDark ? "dark" : "light");
+    }
+
+    themeBtn.addEventListener("click", () => {
+      const isDark = root.classList.contains("dark");
+      setTheme(isDark ? "light" : "dark");
+    });
+
+    // ---------- Reveal on scroll ----------
+    const els = document.querySelectorAll("[data-animate]");
+    const io = new IntersectionObserver((entries) => {
+      for (const e of entries) {
+        if (e.isIntersecting) {
+          e.target.classList.add("show");
+          io.unobserve(e.target);
+        }
+      }
+    }, { threshold: 0.12 });
+
+    els.forEach(el => io.observe(el));
+
+    // ---------- Scrollspy ----------
+    const sections = ["about","skills","projects","education","contact"].map(id => document.getElementById(id));
+    const navLinks = Array.from(document.querySelectorAll(".navlink"));
+
+    const spy = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        const id = entry.target.id;
+        navLinks.forEach(a => {
+          const active = a.getAttribute("href") === "#" + id;
+          a.classList.toggle("font-semibold", active);
+          a.classList.toggle("text-zinc-900", active);
+          a.classList.toggle("dark:text-white", active);
+        });
+      });
+    }, { rootMargin: "-40% 0px -55% 0px" });
+
+    sections.forEach(s => s && spy.observe(s));
+
+    // ---------- Toast ----------
+    const toast = document.getElementById("toast");
+    function showToast(msg) {
+      toast.textContent = msg;
+      toast.classList.remove("hidden");
+      clearTimeout(window.__toastTimer);
+      window.__toastTimer = setTimeout(() => toast.classList.add("hidden"), 2200);
+    }
+
+    // Copy email
+    const copyEmailBtn = document.getElementById("copyEmail");
+    copyEmailBtn.addEventListener("click", async () => {
+      try {
+        await navigator.clipboard.writeText("mansisulakhe5124@gmail.com");
+        showToast("Email copied ✅");
+      } catch {
+        showToast("Copy failed — please copy manually.");
+      }
+    });
+
+    // Copy project summary
+    document.getElementById("projCopy").addEventListener("click", async () => {
+      const text = [
+        "Predictive Analytics for Optimizing Ride-hailing Services",
+        "- Demand forecasting (Python, Scikit-learn)",
+        "- Dynamic pricing (Pandas)",
+        "- Route optimization (SQL + traffic data)",
+        "- Driver behavior analysis",
+        "- Customer satisfaction prediction + Tableau insights"
+      ].join("\n");
+
+      try {
+        await navigator.clipboard.writeText(text);
+        showToast("Project summary copied ✅");
+      } catch {
+        showToast("Copy failed — please copy manually.");
+      }
+    });
+
+    // Fake contact form submit
+    document.getElementById("contactForm").addEventListener("submit", (e) => {
+      e.preventDefault();
+      showToast("Message saved (demo). Add backend/email service later ✅");
+      e.target.reset();
+    });
+
+    // Year
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
